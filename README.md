@@ -1,2 +1,2 @@
 # Goblin-Game
-Game based on hangman written in Java.
+Game similar to hangman written in Java. Completed in my Data structure course.
