@@ -9,19 +9,19 @@ Goblin:   I'm thinking of a six letter word from this list: peanut, slower, fast
           You can guess one letter at a time and I'll tell you if it's in the world and where. 
           You can only gues wron twice.
           
-          < The algorithm will NOT choose a word rather it will wait for an input from the user
-            and decide which words to pick.>
+           The algorithm will NOT choose a word rather it will wait for an input from the user
+            and decide which words to pick
 User:     "l" 
 Goblin:   No! One wrong guess left!
           
-          < The goblin will see in his list of words and decided there were more words without an "l". So he's
-            he's going to use one of the following: peanut, packet, faster.>
+           The goblin will see in his list of words and decided there were more words without an "l". So he's
+            he's going to use one of the following: peanut, packet, faster
             
 User:     "p"
 Goblin:   Yeah, there'sa "p" here: p-----
 
-          < The goblin looks at his list of words and decided that there were more words with p in the first
-            posisition. So he's going to use one of the following: peanut, packet.>
+           The goblin looks at his list of words and decided that there were more words with p in the first
+            posisition. So he's going to use one of the following: peanut, packet.
             
 User:     "n"
 Goblin:   Nope! I win!
@@ -29,6 +29,7 @@ Goblin:   Nope! I win!
 Game ends.
 
 ## Sample Run
+'''
 <$ java GoblinGame ..\dictionary-mini.txt 6 2
 Goblin says "Guess a letter": l
 Goblin says "No dice! 1 wrong guesses left..."
@@ -38,4 +39,4 @@ Goblin says "Guess a letter": n
 Goblin says "No dice! 0 wrong guesses left...."
 Goblin syas "I win! I was thinkin of the word 'packet'
 Your stuff is all mine... I'll come back for more soon!">
-
+'''
