@@ -30,7 +30,7 @@ Game ends.
 
 ## Sample Run
 '''
-<$ java GoblinGame ..\dictionary-mini.txt 6 2
+$ java GoblinGame ..\dictionary-mini.txt 6 2
 Goblin says "Guess a letter": l
 Goblin says "No dice! 1 wrong guesses left..."
 Goblin says "Guess a letter": p
@@ -38,5 +38,5 @@ Goblin says "Yeah, yeah, it's like this: p-----"
 Goblin says "Guess a letter": n
 Goblin says "No dice! 0 wrong guesses left...."
 Goblin syas "I win! I was thinkin of the word 'packet'
-Your stuff is all mine... I'll come back for more soon!">
+Your stuff is all mine... I'll come back for more soon!"
 '''
