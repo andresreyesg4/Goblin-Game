@@ -111,7 +111,7 @@ public class BetterArray<T> {
 
 		// boolean successful = true;
 		if(totalElements <= data.length){
-			if(data[totalElements - 1] != null && totalElements == data.length){
+			if(data[totalElements] != null && totalElements == data.length){
 				// it is at full capacity.
 				T[] newData = (T[]) new Object[data.length * 2];
 				System.arraycopy(data, 0, newData, 0, data.length);
@@ -183,13 +183,27 @@ public class BetterArray<T> {
 			if(data[data.length-1] != null){
 				ensureCapacity(data.length*2);
 			}
-
-			//if its not full, then simply just add the element and shift the items over.
-			for(int i = data.length-1; i > index; i--){
-				data[i] = data[i-1];
+			
+			// shift over the elements of the array if the spot to insert is being used. 
+			if(data[index] != null){ 
+				int i = data.length;
+				while(i + 1 < data.length && data[i] != null>){
+					data[i + 1] = data[i];
+					i++;
+				}
 			}
+			// add the element to the specified index.
 			data[index] = value;
-			totalElements++;    //increment the total number of elements.
+			totalElements++;
+
+
+
+			// //if its not full, then simply just add the element and shift the items over.
+			// for(int i = data.length-1; i > index; i--){
+			// 	data[i] = data[i-1];
+			// }
+			// data[index] = value;
+			// totalElements++;    //increment the total number of elements.
 		}
 	}
 
@@ -330,10 +344,11 @@ public class BetterArray<T> {
 			return applied;
 		}else{
 			T[] newData = (T[]) new Object[newCapacity];
-			for(int i = 0; i < data.length; i++)
-			{
-				newData[i] = data[i];
-			}
+			System.arraycopy(data, 0, newData, 0, totalElements);
+			// for(int i = 0; i < data.length; i++)
+			// {
+			// 	newData[i] = data[i];
+			// }
 			data = newData;
 			applied = true;
 		}
